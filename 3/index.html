@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="gb2312" />
     <title>fullPage</title>
     <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="../1/mypage.css" />
@@ -66,6 +66,16 @@
         background: -webkit-linear-gradient(#92a1ca, #76c2bd);
         background: linear-gradient(#92a1ca, #76c2bd);
     }
+    #basicInfo .basicShow .m_portrait {
+    	 top: 0px;
+}
+    .m_portrait div {
+	background: url(http://www.lagou.com:80/images/profile_cover.png) no-repeat;
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	z-index: 5;
+}
     </style>
     <script src="http://www.playwx.com/hd/static/common/js/jquery-1.10.2.min.js"></script>
     <script src="../jquery.easings.min.js"></script>
@@ -87,8 +97,12 @@
     <a href="https://github.com/guxun12" class="back">
         <img src="imgs/back-bottom.png">
     </a>
-    <div id="header">Header</div>
-    <div id="footer">Footer</div>
+    <div id="header">顾迅</div>
+    <div class="m_portrait">
+						<div></div>
+						<img src="http://www.lagou.com:80/upload/headpic/572b296a33704458b3d1aae975f184ef.jpg" width="120" height="120" alt="">
+					</div>
+    <div id="footer">梦想还是要有的，万一实现了呢。</div>
 
 
 
