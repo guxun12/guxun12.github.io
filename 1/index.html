@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -19,11 +19,44 @@
         position: absolute;
         margin-left: -420px;
     }
+
     .intro p {
         width: 50%;
         margin: 0 auto;
         font-size: 1.5em;
     }
+.tabs-con {
+border: 2px solid #00addc;
+height: 175px;
+background: #FFF;
+width: 510px;
+margin: auto;
+}
+.tabs-con div.selected {
+display: block;
+overflow: hidden;
+}
+ .tabs-con pre .sc {
+color: #009f06;
+display:block;text-align:left;
+}
+ .tabs-con pre .sb {
+color: #2B91AF;
+}
+ .tabs-con pre .sr {
+color: #e33538;
+}
+
+.tabs-con pre {
+padding: 10px;
+font-family: Monaco, Consolas, "Lucida Console", monospace;
+font-size: 12px;
+line-height: 15px;
+height: 155px;
+overflow: auto;
+
+display:block;text-align:left;
+}
     </style>
     <script src="http://www.playwx.com/hd/static/common/js/jquery-1.10.2.min.js"></script>
     <script src="../jquery.easings.min.js"></script>
@@ -46,16 +79,16 @@
 <body>
 
     <a href="http://guxun12.github.io/3/%E7%AE%80%E5%8E%86/%E9%A1%BE%E8%BF%85%E7%9A%84%E7%AE%80%E5%8E%86" class="back">
-        <img src="imgs/back-bottom.png">
+        <img src="imgs/resume.png">
     </a>
     <ul id="menu">
-        <li data-menuanchor="firstPage"><a href="#firstPage"style="  font-size:50px;">关于我</a>
+        <li data-menuanchor="firstPage"><a href="#firstPage"style="  font-size:50px;">Tab One</a>
         </li>
-        <li data-menuanchor="secondPage"><a href="#secondPage"style="  font-size:50px;">我做的</a>
+        <li data-menuanchor="secondPage"><a href="#secondPage"style="  font-size:50px;">Tab Two</a>
         </li>
-        <li data-menuanchor="3rdPage"><a href="#3rdPage"style="  font-size:50px;">我会的</a>
+        <li data-menuanchor="3rdPage"><a href="#3rdPage"style="  font-size:50px;">Tab Three</a>
         </li>
-        <li data-menuanchor="4thpage"><a href="#4thpage"style="  font-size:50px;">我想的</a>
+        <li data-menuanchor="4thpage"><a href="#4thpage"style="  font-size:50px;">Tab Four</a>
         </li>
     </ul>
 
@@ -63,69 +96,82 @@
     <div id="fullpage">
 
         <div class="section " id="section0">
-            <h1>fullPage.js</h1>
-            <p>Create Beautiful Fullscreen Scrolling Websites</p>
-            <img src="imgs/fullPage.png" alt="fullPage" />
+            <h1>AboutMe.java</h1>
+<img src="imgs/example2.jpg" alt="example" />
+
         </div>
 
 
         <div class="section" id="section1">
-            <div class="slide" id="slide1" data-anchor="slide1">
+<div class="slide" id="slide1" data-anchor="slide1">
                 <div class="intro">
-                    <h1>仿饿了么安卓客户端</h1>
-                    <p>这个demo主要展示自己作为合格程序猿应有的思考和调查能力，以及鄙猿应聘的诚心，demo的ui图片素材是通过反编译饿了么客户端得到的。 
-其他详细说明请戳左下角哦！
-                    <img src="imgs/slider.png" alt="slider" />
+<img src="imgs/1.png" alt="房谱网安卓客户端" />
+                   <h1>房谱网安卓客户端</h1>
+                    <p>向左可以滑动哦</p>
+                <img src="imgs/slider.png" alt="slider" />
                 </div>
             </div>
 
             <div class="slide" id="slide2" data-anchor="slide2">
                 <div class="intro">
-                    <img src="imgs/1.png" alt="simple" />
-                    <h1>房谱网安卓客户端</h1>
-                    <p>该客户端是房谱网的安卓版本，主要功能有：房源综合查询，在线咨询，网上支付，地图定位，消息推送，历史记录，房源分享，信息统计等。作为主要coder，大约完成coding工作量的60%。本猿在该项目中后期，承担技术分析，和第三方sdk（支付宝、网银、即时通讯、推送、百度地图等）沟通，服务端接口实现和数据规范定义，以及打包发布新版本。</p>
-                </div>
+                    <img src="imgs/2.png" alt="管理系统" /> <h1>房谱网后台管理系统</h1>
+                    <p>简历请戳左下角机器人</p>
+                    </div>
             </div>
 
             <div class="slide" id="slide3" data-anchor="slide3">
                 <div class="intro">
-                    <img src="imgs/2.png" alt="Cool" />
-                    <h1>房谱网后台管理系统</h1>
-                    <p>项目底层使用ssh框架，实现房谱网首页模块管理、基本信息维护（广告，新闻，合作商，房源数据，订单跟进，统计，调查问卷等）、用户权限，系统日志等功能。可以通过上传Excel批量维护房源数据，对app进行消息推送。本猿全程参与主要功能的讨论与实现。</p>
-                </div>
+                    <img src="imgs/3.png" alt="房谱网" />
+<h1>房谱网</h1>
+                    <p>详情请戳左下角机器人</p>
+                   </div>
             </div>
 
             <div class="slide" id="slide4" data-anchor="slide4">
                 <div class="intro">
-                    <img src="imgs/3.png" alt="Compatible" />
-                    <h1>房谱网</h1>
-                    <p>房谱网是地产信息门户网站，实现对房源户信息的精确查询，拥有海量数据支撑，可以在线预订房源，通过房谱网后台管理系统实现订单跟进，线下交易。本猿主要参与服务端业务逻辑处理，数据库维护（修/建存储过程、触发器、表）等。</p>
-                </div>
+                    
+<h1>And More...</h1>
+                    <p>仿饿了么安卓客户端</p><p>仿京东、微信demo</p><p>各种小demo</p>
+<p>请戳左下角机器人吧！</p>
+            
+                    </div>
             </div>
 
         </div>
 
         <div class="section" id="section2">
             <div class="intro">
-                <h1>技能</h1>
-                <img src="imgs/example2.jpg" alt="example" />
+                <h1>Dream.java</h1>
+                <div class="tabs-con">
+            <div class="selected">
+              <pre><span class="sc">// 初始化dream</span>
+<span class="sb">DreamFactory</span> .getInstance().init(guxunContext);
+
+<span class="sc">//创建一个dream对象</span>
+<span class="sb">DreamFactory</span> dream = <span class="sb">DreamFactory</span>.createDream(<span class="sb">Dream.Type.SHANGHAI</span>);
+<span class="sc">//设置dream对象的接收方</span>
+dream .setReceipt(<span class="sr">"顾迅"</span>);
+<span class="sc">//设置dream内容</span>
+dream .addContent(new <span class="sb">DreamContent</span>(<span class="sr">"你好，上海!"</span>));
+
+<span class="sc">//初始化dream</span>
+<span class="sb"><span class="sb">DreamManager</span>.getInstance().initDream(dream);</span>
+              </pre>
+            </div>
+            </div>
             </div>
         </div>
 
-        <div class="section" id="section3">
+        <div class="section" id="section3"style="background-color : #00a2e2">
             <div class="intro">
-                <h1>Working On Tablets</h1>
-                <p>
-                    Designed to fit to different screen sizes as well as tablet and mobile devices.
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                </p>
+                <h1>梦想还是要有的，</h1>
+ 
+                <h1>
+                   万一实现了呢。 
+                   
+                </h1> 
             </div>
-            <img src="imgs/tablets.png" alt="tablets" />
+           
         </div>
 
     </div>
