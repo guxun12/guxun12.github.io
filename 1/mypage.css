@@ -15,7 +15,7 @@
 .back img {
     width: 100px;
     height: 100px;
-    padding: 5px;
+    padding: 10px;
 }
 @-webkit-keyframes shake {
     0%, 100% {
@@ -113,6 +113,7 @@ p{
 	width:100%;
 	padding:0;
 	margin:0;
+ text-align:center;
 }
 #menu li{
 	display:inline-block;
