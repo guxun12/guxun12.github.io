@@ -142,6 +142,9 @@ $(document).ready(function() {
                     $('#section2').find("h1").delay(1).animate({
                         left: '0%'
                     }, 700, 'easeOutCirc');
+                     $('#section2').find("pre").delay(1).animate({
+                        left: '-130%'
+                    }, 700, 'easeOutCirc');
                 }
                 if (index == 4) {
                     $('#section3_pic').delay(1).animate({
@@ -155,6 +158,7 @@ $(document).ready(function() {
                     $('#section3_h1').delay(1).animate({
                         left: '0%'
                     }, 700, 'easeOutQuint');
+                    
                 }
             },
             onLeave: function(index, direction) {
@@ -183,6 +187,9 @@ $(document).ready(function() {
                     }, 700, 'easeOutBack');
 
                     $('#section2').find("h1").delay(1).animate({
+                        left: '-130%'
+                    }, 700, 'easeInBack');
+                    $('#section2').find("pre").delay(1).animate({
                         left: '-130%'
                     }, 700, 'easeInBack');
                 }
@@ -273,13 +280,14 @@ $(document).ready(function() {
         <div class="section" id="section2">
             <div class="intro">
                 <h1>Dream.java</h1>
+                 <p>我相信“技术改变生活”！</p>
                 
               
             </div>
               <div class="tabs-con">
             <div class="selected"id="code1">
               <pre><span class="sc">// 初始化dream</span>
-              <p>我相信“技术改变生活”！</p>
+             
 <span class="sb">DreamFactory</span> .getInstance().init(guxunContext);
 
 <span class="sc">//创建一个dream对象</span>
