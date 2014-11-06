@@ -7,19 +7,40 @@
     <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="mypage.css" />
     <style type="text/css">
-    #section0 img, 
-    #section1 img {
+    #section0 img {
         margin: 20px 0 0 0;
+    }
+    #slide1 img,
+    #section2 img {
+        position: relative;
+        left: -130%;
+    }
+    #slide1 h1,
+    #slide1 p,
+    #section2 h1,
+    #section2 p {
+        position: relative;
+        left: -130%;
     }
     #section2 img {
         margin: 20px 0 0 52px;
     }
-    #section3 img {
-        bottom: 0px;
-        position: absolute;
-        margin-left: -420px;
+    #section3 h1,
+    #section3 p {
+        top: 150px;
+        position: relative;
+        left: -130%;
     }
-
+    #section3 img {
+        top: 50px;
+        left: -130%;
+        position: relative;
+    }
+    .intro p {
+        width: 50%;
+        margin: 0 auto;
+        font-size: 1.5em;
+    }
     .intro p {
         width: 50%;
         margin: 0 auto;
@@ -93,8 +114,11 @@ $(document).ready(function() {
             loopTop: true,
             afterLoad: function(anchorLink, index) {
                 if (index == 2) {
-                    $('#slide1').find("img").delay(1).animate({
+                    $('#section1_pic').delay(1).animate({
                         left: '0%'
+                    }, 700, 'easeOutExpo');
+                     $('#section1_img').delay(1).animate({
+                        left: '-130%'
                     }, 700, 'easeOutExpo');
 
                     $('#slide1').find("p").delay(1).animate({
@@ -119,7 +143,7 @@ $(document).ready(function() {
                     }, 700, 'easeOutCirc');
                 }
                 if (index == 4) {
-                    $('#section3').find("img").delay(1).animate({
+                    $('#section3_pic').delay(1).animate({
                         left: "0%"
                     }, 700, 'easeInOutCubic');
 
@@ -127,14 +151,17 @@ $(document).ready(function() {
                         left: '0%'
                     }, 700, 'easeInOutQuart');
 
-                    $('#section3').find("h1").delay(1).animate({
+                    $('#section3_h1').delay(1).animate({
                         left: '0%'
                     }, 700, 'easeOutQuint');
                 }
             },
             onLeave: function(index, direction) {
                 if (index == 2) {
-                    $('#slide1').find("img").delay(1).animate({
+                    $('#section1_pic').delay(1).animate({
+                        left: '-130%'
+                    }, 700, 'easeOutExpo');
+                     $('#section1_img').delay(1).animate({
                         left: '-130%'
                     }, 700, 'easeOutExpo');
                     $('#slide1').find("p").delay(1).animate({
@@ -146,7 +173,7 @@ $(document).ready(function() {
                     }, 700, 'easeOutExpo');
                 }
                 if (index == 3) {
-                    $('#section2').find("img").delay(1).animate({
+                    $('#section2').find("pre").delay(1).animate({
                         left: '-130%'
                     }, 700, 'easeOutExpo');
 
@@ -159,7 +186,7 @@ $(document).ready(function() {
                     }, 700, 'easeInBack');
                 }
                 if (index == 4) {
-                    $('#section3').find("img").delay(1).animate({
+                    $('#section3_pic').delay(1).animate({
                         left: "-130%"
                     }, 700, 'easeInBounce');
 
@@ -167,7 +194,7 @@ $(document).ready(function() {
                         left: '-130%'
                     }, 700, 'easeInOutExpo');
 
-                    $('#section3').find("h1").delay(1).animate({
+                    $('#section3_h1').delay(1).animate({
                         left: '-130%'
                     }, 700, 'easeOutCirc');
                 }
@@ -184,13 +211,13 @@ $(document).ready(function() {
         <img src="imgs/resume.png">
     </a>
     <ul id="menu">
-        <li data-menuanchor="firstPage"><a href="#firstPage"style="  font-size:50px;">Tab One</a>
+        <li data-menuanchor="firstPage"><a href="#firstPage"style="  font-size:50px;">AboutMe</a>
         </li>
-        <li data-menuanchor="secondPage"><a href="#secondPage"style="  font-size:50px;">Tab Two</a>
+        <li data-menuanchor="secondPage"><a href="#secondPage"style="  font-size:50px;">Works</a>
         </li>
-        <li data-menuanchor="3rdPage"><a href="#3rdPage"style="  font-size:50px;">Tab Three</a>
+        <li data-menuanchor="3rdPage"><a href="#3rdPage"style="  font-size:50px;">Dream</a>
         </li>
-        <li data-menuanchor="4thpage"><a href="#4thpage"style="  font-size:50px;">Tab Four</a>
+        <li data-menuanchor="4thpage"><a href="#4thpage"style="  font-size:50px;">Hope</a>
         </li>
     </ul>
 
@@ -199,6 +226,7 @@ $(document).ready(function() {
 
         <div class="section " id="section0">
             <h1>AboutMe.java</h1>
+            <p>试试向下滑动？</p>
 <img src="imgs/example2.jpg" alt="example" />
 
         </div>
@@ -206,25 +234,25 @@ $(document).ready(function() {
 
         <div class="section" id="section1">
 <div class="slide" id="slide1" data-anchor="slide1">
-                <div class="intro">
-<img src="imgs/1.png" alt="房谱网安卓客户端" />
-                   <h1>房谱网安卓客户端</h1>
-                    <p>向左可以滑动哦</p>
-                <img src="imgs/slider.png" alt="slider" />
+                <div class="intro"id="se_slide1">
+<img id="section1_pic"src="imgs/1.png" alt="房谱网安卓客户端" />
+                  <a href="http://android.myapp.com/myapp/detail.htm?apkName=cn.com.xfdc" target="http://android.myapp.com/myapp/detail.htm?apkName=cn.com.xfdc"> <h1>房谱网安卓客户端</h1><a/>
+                    <p>右边还有哦。</p>
+                <img  id="section1_img"src="imgs/slider.png" alt="slider" />
                 </div>
             </div>
 
             <div class="slide" id="slide2" data-anchor="slide2">
                 <div class="intro">
-                    <img src="imgs/2.png" alt="管理系统" /> <h1>房谱网后台管理系统</h1>
-                    <p>简历请戳左下角机器人</p>
+                    <img src="imgs/2.png" alt="管理系统" /> <a href="http://61.161.163.62/xffp_manage/xffp/login/user_login.jsp" target="http://61.161.163.62/xffp_manage/xffp/login/user_login.jsp"><h1 >房谱网后台管理系统</h1></a>
+                    <p>详情请戳左下角机器人</p>
                     </div>
             </div>
 
             <div class="slide" id="slide3" data-anchor="slide3">
                 <div class="intro">
-                    <img src="imgs/3.png" alt="房谱网" />
-<h1>房谱网</h1>
+                    <img src="imgs/3.png" alt="房谱网" /><a href="http://www.house-book.com.cn/" target="http://www.house-book.com.cn">
+<h1>房谱网</h1></a>
                     <p>详情请戳左下角机器人</p>
                    </div>
             </div>
@@ -232,9 +260,9 @@ $(document).ready(function() {
             <div class="slide" id="slide4" data-anchor="slide4">
                 <div class="intro">
                     
-<h1>And More...</h1>
-                    <p>仿饿了么安卓客户端</p><p>仿京东、微信demo</p><p>各种小demo</p>
-<p>请戳左下角机器人吧！</p>
+<a href="http://www.eoeandroid.com/forum.php?mod=viewthread&amp;tid=550100" target="http://www.eoeandroid.com/forum.php?mod=viewthread&amp;tid=550100"><h1>仿饿了么安卓客户端</h1><a/>
+                    <p></p><p>仿京东、微信demo</p><p>And More...</p>
+<p>详情请戳左下角机器人</p>
             
                     </div>
             </div>
@@ -244,35 +272,42 @@ $(document).ready(function() {
         <div class="section" id="section2">
             <div class="intro">
                 <h1>Dream.java</h1>
-                <div class="tabs-con">
-            <div class="selected">
+                
+              
+            </div>
+              <div class="tabs-con">
+            <div class="selected"id="code1">
               <pre><span class="sc">// 初始化dream</span>
 <span class="sb">DreamFactory</span> .getInstance().init(guxunContext);
 
 <span class="sc">//创建一个dream对象</span>
-<span class="sb">DreamFactory</span> dream = <span class="sb">DreamFactory</span>.createDream(<span class="sb">Dream.Type.SHANGHAI</span>);
+<span class="sb">DreamFactory</span> dream = <span class="sb">DreamFactory</span>.createDream(<span class="sb">Dream.Place.SHANGHAI</span>);
 <span class="sc">//设置dream对象的接收方</span>
 dream .setReceipt(<span class="sr">"顾迅"</span>);
 <span class="sc">//设置dream内容</span>
-dream .addContent(new <span class="sb">DreamContent</span>(<span class="sr">"你好，上海!"</span>));
+dream .addContent(new <span class="sb">DreamContent</span>(<span class="sr">"技术改变生活!"</span>));
 
 <span class="sc">//初始化dream</span>
 <span class="sb"><span class="sb">DreamManager</span>.getInstance().initDream(dream);</span>
               </pre>
             </div>
             </div>
-            </div>
         </div>
 
-        <div class="section" id="section3"style="background-color : #00a2e2">
+        <div class="section" id="section3" >
             <div class="intro">
-                <h1>梦想还是要有的，</h1>
- 
-                <h1>
-                   万一实现了呢。 
-                   
-                </h1> 
+                <h1 id="section3_h1">Join ele</h1>
+                <p>
+                    
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </p>
             </div>
+            <img id="section3_pic"src="imgs/ele.png" alt="管理系统" /> 
            
         </div>
 
